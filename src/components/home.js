@@ -1,11 +1,13 @@
-// src/components/home.js
+// src/components/Home.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './home.module.css';
 import mapImage from '../assets/mapa_med.png';
 
 const Home = () => {
   const [selectedCity, setSelectedCity] = useState('Medellín');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleCitySelect = (city) => {
     setSelectedCity(city);
@@ -18,8 +20,8 @@ const Home = () => {
         <h1 className={styles.logo}>GoPlanner</h1>
         <nav>
           <ul className={styles.navMenu}>
-            <li>Inicio</li>
-            <li>Detalles</li>
+            <li onClick={() => navigate('/')}>Inicio</li>
+            <li onClick={() => navigate('/parada')}>Detalles</li>
           </ul>
         </nav>
       </header>
@@ -37,7 +39,7 @@ const Home = () => {
           
           {isDropdownOpen && (
             <ul className={styles.dropdownMenu}>
-              <li onClick={() => handleCitySelect('Medellin')}>Medellin</li>
+              <li onClick={() => handleCitySelect('Medellín')}>Medellín</li>
               <li onClick={() => handleCitySelect('Cali')}>Cali</li>
               <li onClick={() => handleCitySelect('Cartagena')}>Cartagena</li>
             </ul>
@@ -53,10 +55,12 @@ const Home = () => {
             <li>Duración: <strong>3 días</strong></li>
             <li>Eventos destacados: <strong>4</strong> ⭐</li>
           </ul>
-          <p><strong>Explorando:</strong> {selectedCity}</p>
         </div>
 
-        <button className={styles.exploreButton}>
+        <button 
+          className={styles.exploreButton} 
+          onClick={() => navigate('/parada')}
+        >
           📅 Explorar itinerario día a día
         </button>
       </main>

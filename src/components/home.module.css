@@ -1,9 +1,9 @@
 /* src/components/Home.module.css */
-
 .homeContainer {
   text-align: center;
-  font-family: inherit, sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #f5f5f5;
+  padding: 20px;
 }
 
 .header {
@@ -11,61 +11,71 @@
   justify-content: space-between;
   align-items: center;
   background-color: #2c3e50;
-  padding: 1px 80px;
+  padding: 10px 50px;
   color: white;
 }
 
-.logo { 
+.logo {
   font-size: 2em;
-  font-weight: bolder;
+  font-weight: bold;
 }
-.dropdown {
-  display: block;
-  margin: 0 auto 10px;
-  padding: 5px 10px;
-  border: none;
-  background-color: #bdc3c7;
-  border-radius: 5px;
-  cursor: pointer;
-}
+
 .navMenu {
   list-style: none;
   display: flex;
-  gap: 80px;
-  font-size: 1.6em;
+  gap: 20px;
+  font-size: 1.2em;
 }
 
 .navMenu li {
   cursor: pointer;
+  transition: color 0.3s;
 }
 
-.mainContent {
-  margin-top: 50px;
+.navMenu li:hover {
+  color: #3498db;
 }
-.welcome{
-  font-size: 2em;
-  font-weight: bolder;
-  color:#1A2B4C;
-  box-shadow: 0 2px 4px #1A2B4C;
 
+.dropdown {
+  background-color: #bdc3c7;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdown:hover {
+  background-color: #95a5a6;
+}
+
+.dropdownMenu {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: 150px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.dropdownMenu li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdownMenu li:hover {
+  background-color: #f0f0f0;
 }
 
 .mapContainer {
   position: relative;
-  display: inline-block;
   margin-top: 20px;
-}
-
-.citySelector {
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 5px 30px;
-  border: none;
-  background-color: #dcdde1;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 .mapImage {
@@ -77,11 +87,11 @@
 .tripSummary {
   display: inline-block;
   text-align: left;
-  margin-left: 20px;
   background: #F0F2F5;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px #1A2B4C;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
 }
 
 .exploreButton {
@@ -92,7 +102,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1em;
+  transition: background-color 0.3s;
 }
 
 .exploreButton:hover {

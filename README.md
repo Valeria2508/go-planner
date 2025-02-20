@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Proyecto Multi-Framework
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto integra múltiples tecnologías front-end incluyendo React, Vue.js, junto con HTML, CSS y JavaScript.
 
-## Available Scripts
+## Requisitos Previos
 
-In the project directory, you can run:
+Antes de comenzar, asegúrate de tener instalado:
 
-### `npm start`
+- [Node.js](https://nodejs.org/) (versión 16.0 o superior)
+- [npm](https://www.npmjs.com/) (normalmente viene con Node.js)
+- [Git](https://git-scm.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instalación
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clona el repositorio:
+```bash
+git clone [URL-del-repositorio]
+cd [nombre-del-proyecto]
+```
 
-### `npm test`
+2. Instala las dependencias del proyecto:
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Instala las dependencias específicas de React:
+```bash
+npm install react react-dom
+```
 
-### `npm run build`
+4. Instala las dependencias específicas de Vue.js:
+```bash
+npm install vue @vue/compiler-sfc
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Configuración del Entorno de Desarrollo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Abre el proyecto en Visual Studio Code:
+```bash
+code .
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Instala las extensiones recomendadas para VS Code:
+   - ESLint
+   - Prettier
+   - Vue Language Features (Volar)
+   - React Developer Tools
 
-### `npm run eject`
+## Estructura del Proyecto
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+proyecto/
+├── src/
+│   ├── components/
+│   │   ├── react/
+│   │   └── vue/
+│   ├── styles/
+│   ├── assets/
+│   └── App.js
+├── public/
+│   └── index.html
+├── package.json
+└── README.md
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Scripts Disponibles
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+En el directorio del proyecto, puedes ejecutar:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `npm start`: Inicia el servidor de desarrollo
+- `npm run build`: Construye la aplicación para producción
+- `npm test`: Ejecuta las pruebas
+- `npm run lint`: Ejecuta el linter
 
-## Learn More
+## Desarrollo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Para iniciar el servidor de desarrollo:
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Abre [http://localhost:3000](http://localhost:3000) en tu navegador
 
-### Code Splitting
+## Despliegue
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Para construir el proyecto para producción:
 
-### Analyzing the Bundle Size
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Esto creará una carpeta `build` con los archivos optimizados listos para ser desplegados.
 
-### Making a Progressive Web App
+## Contribución
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Haz fork del proyecto
+2. Crea una rama para tu característica (`git checkout -b feature/AmazingFeature`)
+3. Haz commit de tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
 
-### Advanced Configuration
+## Soporte
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Si encuentras algún problema o tienes alguna sugerencia, por favor abre un issue en el repositorio.
