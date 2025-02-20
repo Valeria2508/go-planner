@@ -1,0 +1,26 @@
+.container {
+  padding: 20px;
+}
+
+.day {
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: #004080;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.activities {
+  padding-left: 20px;
+}
+
+.activity {
+  list-style: none;
+  margin: 5px 0;
+}
