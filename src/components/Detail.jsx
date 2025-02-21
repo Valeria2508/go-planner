@@ -22,7 +22,7 @@ const Detail = () => {
       <header className={styles.header}>
         <button className={styles.backButton} onClick={() => navigate(-1)}>Home</button>
         <h1 className={styles.title}>Detalle de Parada</h1>
-        <button className={styles.shareButton} onClick={() => navigate(-1)} >Día a día</button>
+        <button className={styles.shareButton} onClick={() => navigate('/daybyday')}>Día a día</button>
       </header>
 
       <div className={styles.card}>
