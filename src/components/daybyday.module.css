@@ -1,26 +1,163 @@
-.container {
+/* daybyday.module.css */
+.itineraryContainer {
+  max-width: 800px;
+  margin: 20px auto;
   padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
-.day {
-  margin-bottom: 10px;
+.itineraryHeader {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #2c4f91, #147e96cc);
+  border-radius: 15px;
+
 }
 
-.button {
-  background-color: #004080;
+.itineraryHeader h1 {
   color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+
+}
+
+.itineraryDates {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 10px 0 0 0;
+  font-size: 18px;
+ 
+}
+
+
+.dayButton {
   width: 100%;
-  text-align: left;
+  padding: 18px 20px;
+  margin: 10px;
+  background: linear-gradient(145deg,#1d3153,  #a1adc4);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.activities {
-  padding-left: 20px;
+.dayButton:hover {
+  background: linear-gradient(145deg, #3949ab, #303f9f);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(63, 81, 181, 0.3);
 }
 
-.activity {
-  list-style: none;
-  margin: 5px 0;
+
+
+.dayTitle {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.arrow {
+  transition: transform 0.4s ease;
+  font-size: 14px;
+}
+
+
+.activitiesContainer {
+  background: white;
+  padding: 20px 25px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.activitiesContainer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.activitiesContainer li {
+  padding: 15px 0;
+  border-bottom: 1px solid #eef2f7;
+  color: #495057;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.activitiesContainer li:before {
+  content: "•";
+  color: #3f51b5;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.activitiesContainer li:hover {
+  padding-left: 5px;
+  color: #3f51b5;
+}
+
+.activitiesContainer li:last-child {
+  border-bottom: none;
+}
+
+.instructionText {
+  text-align: center;
+  color: #6c757d;
+  font-size: 14px;
+  margin-top: 25px;
+  font-style: italic;
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px dashed #dee2e6;
+}
+
+/* Efecto hover para el contenedor principal */
+.itineraryContainer:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+ 
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .itineraryContainer {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .itineraryHeader h1 {
+    font-size: 24px;
+  }
+
+  .itineraryDates {
+    font-size: 16px;
+  }
+
+  .dayButton {
+    padding: 15px 20px;
+  }
 }

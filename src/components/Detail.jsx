@@ -1,18 +1,18 @@
 // src/components/StopDetail.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './StopDetail.module.css';
+import styles from './Detail.module.css';
 import img1 from '../assets/hotel1.png';
 import img2 from '../assets/hotel2.png';
 import img3 from '../assets/hotel3.png';
 
-const StopDetail = () => {
+const Detail = () => {
   const navigate = useNavigate();
 
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <button className={styles.backButton} onClick={() => navigate(-1)}>← Volver</button>
+        <button className={styles.backButton} onClick={() => navigate(-1)}>Home</button>
         <h1 className={styles.title}>Detalle de Parada</h1>
         <button className={styles.shareButton}>Itinerario</button>
       </header>
@@ -41,4 +41,4 @@ const StopDetail = () => {
   );
 };
 
-export default StopDetail;
+export default Detail;

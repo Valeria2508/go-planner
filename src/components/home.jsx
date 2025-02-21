@@ -20,8 +20,7 @@ const Home = () => {
         <h1 className={styles.logo}>GoPlanner</h1>
         <nav>
           <ul className={styles.navMenu}>
-            <li onClick={() => navigate('/')}>Inicio</li>
-            <li onClick={() => navigate('/parada')}>Detalles</li>
+            <li onClick={() => navigate('/detalle')}>Detalles</li>
           </ul>
         </nav>
       </header>
@@ -59,7 +58,7 @@ const Home = () => {
 
         <button 
           className={styles.exploreButton} 
-          onClick={() => navigate('/parada')}
+          onClick={() => navigate('/detalle')}
         >
           📅 Explorar itinerario día a día
         </button>
