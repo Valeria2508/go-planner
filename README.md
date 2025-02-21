@@ -79,7 +79,7 @@ En el directorio del proyecto, puedes ejecutar:
 npm start
 ```
 
-2. Abre [http://localhost:3000](http://localhost:3000/home) en tu navegador
+2. Abre [http://localhost:3000/home](http://localhost:3000/home) en tu navegador
 
 ## Despliegue
 
