@@ -1,6 +1,6 @@
-# Proyecto Multi-Framework
+# Proyecto GoPlanner
 
-Este proyecto integra múltiples tecnologías front-end incluyendo React, Vue.js, junto con HTML, CSS y JavaScript.
+Este proyecto integra múltiples tecnologías front-end incluyendo React, junto con HTML, CSS y JavaScript.
 
 ## Requisitos Previos
 
@@ -91,14 +91,3 @@ npm run build
 
 Esto creará una carpeta `build` con los archivos optimizados listos para ser desplegados.
 
-## Contribución
-
-1. Haz fork del proyecto
-2. Crea una rama para tu característica (`git checkout -b feature/AmazingFeature`)
-3. Haz commit de tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-## Soporte
-
-Si encuentras algún problema o tienes alguna sugerencia, por favor abre un issue en el repositorio.
