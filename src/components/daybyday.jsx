@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import styles from './daybyday.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const Itinerario = () => {
   const [activeDay, setActiveDay] = useState(null);
+  const navigate = useNavigate();
 
   const itineraryData = [
     {
@@ -16,34 +18,34 @@ const Itinerario = () => {
         "🌍02:00pm Recorrido Parque Explora",
         "🧁04:00pm Picnic Jardín botánico",
         "📍06:00pm Regreso al hotel: Cambio de ropa",
-        "07:00pm Cena restaurante Carolina",
-        "08:30pm Rumba discoteca Perro Negro",
-        "02:00am Regreso al hotel: Descanso"
+        "🛕07:00pm Cena restaurante Carolina",
+        "😎08:30pm Rumba discoteca Perro Negro",
+        "😴02:00am Regreso al hotel: Descanso"
       ]
     },
     {
       day: 2,
       date: "Viernes 7 de marzo",
       activities: [
-        "09:00am Desayuno en el hotel",
-        "11:0am  Parque norte",
-        "02:00pm Almuerzo en parque norte",
-        "05:00pm Regreso al hotel: piscina y jacuzzi",
-        "07:00pm Cena en el hotel",
-        "08:00pm Karaoke: Actividad en el hotel",
+        "🥓09:00am Desayuno en el hotel",
+        "📍11:0am  Parque norte",
+        "🥗02:00pm Almuerzo en parque norte",
+        "👙05:00pm Regreso al hotel: piscina y jacuzzi",
+        "🥡07:00pm Cena en el hotel",
+        "🎤08:00pm Karaoke: Actividad en el hotel",
       ]
     },
     {
       day: 3,
       date: "Sábado 8 de marzo",
       activities: [
-        "09:00am Desayuno en el hotel",
-        "11:0am  Pueblito paisa",
-        "01:00pm Almuerzo en pueblito paisa",
-        "03:00pm Santa fé de Antioquia",
-        "06:00pm Cena en restaurante El español",
-        "010:00pm Regreso al hotel",
-        "03:00pm Fin del intinerario",
+        "🥓09:00am Desayuno en el hotel",
+        "📍11:0am  Pueblito paisa",
+        "🥗01:00pm Almuerzo en pueblito paisa",
+        "📍03:00pm Santa fé de Antioquia",
+        "🥩06:00pm Cena en restaurante El español",
+        "🏨010:00pm Regreso al hotel",
+        "👌03:00pm Fin del intinerario",
       ]
     },
     // ... resto del data
@@ -61,6 +63,8 @@ const Itinerario = () => {
     <div className={styles.itineraryContainer}>
       <div className={styles.itineraryHeader}>
         <h1>Itinerario Día a día: Aventura en Medellín!</h1>
+        <button onClick={() => navigate('/home')}>Home</button>
+        <button onClick={() => navigate('/detail')}>Detalle</button>
         <p className={styles.itineraryDates}>del 6 al 8 de marzo</p>
       </div>
       <div>

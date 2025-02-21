@@ -10,8 +10,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2c3e50;
-  padding: 10px 50px;
+  background: linear-gradient(145deg, #242a52, #303f9f);
+  border-radius: 5px;
+  padding: 5px 50px;
   color: white;
 }
 
@@ -37,40 +38,44 @@
 }
 
 .dropdown {
-  background-color: #bdc3c7;
+  background-color: #a9b6e0;
   border: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 5px 15px;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  bottom: 100px;
+  cursor: pointer; 
 }
 
 .dropdown:hover {
   background-color: #95a5a6;
+
+
 }
 
 .dropdownMenu {
   list-style: none;
-  margin: 10px 0;
-  padding: 0;
-  background: white;
+  padding:0 ;
+  background: rgba(157, 168, 218, 0.521);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  width: 150px;
+  width: 190px;
+  margin-left: 550px;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+
 }
+
 
 .dropdownMenu li {
   padding: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
+
+  
 }
 
 .dropdownMenu li:hover {
-  background-color: #f0f0f0;
+  background-color: #2b3c6b;
+  color: rgb(255, 255, 255);
 }
 
 .mapContainer {
@@ -79,19 +84,42 @@
 }
 
 .mapImage {
+  display: block;
+  margin: 40px 0 0 100px;  /* Empuja 20px a la derecha */
   width: 400px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
+  transition: transform 0.4s ease;
 }
+
+.mapImage:hover {
+  transform: scale(1.1);   /* Expande un 10% */
+}
+
+.resumen{
+  color: #2b3c6b;
+  font-size: 1.5em;
+  line-height: 1.2;       /* Ajusta el espacio vertical */
+  position: relative;     
+  top: -25px;     
+}
+.summaryList{
+  position: relative;     
+  top: -30px;     
+}
+
 
 .tripSummary {
   display: inline-block;
   text-align: left;
-  background: #F0F2F5;
-  padding: 15px;
+  background: hwb(0 100% 0% / 0.651);
+  padding: 20px;
+  height: 200px;
+  width: 180px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  margin-top: 20px;
+  position: relative;     /* Habilita desplazamientos controlados */
+  top: -270px;             /* Sube más el cuadro */
+  left: 420px;            /* Mueve a la derecha */
+  transition: all 0.3s ease;
 }
 
 .exploreButton {
@@ -103,6 +131,9 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  position: relative;
+  top: -560px;
+  left: 200px;
 }
 
 .exploreButton:hover {

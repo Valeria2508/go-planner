@@ -20,7 +20,7 @@ const Home = () => {
         <h1 className={styles.logo}>GoPlanner</h1>
         <nav>
           <ul className={styles.navMenu}>
-            <li onClick={() => navigate('/detalle')}>Detalles</li>
+            <li onClick={() => navigate('/detail')}>Detalles</li>
           </ul>
         </nav>
       </header>
@@ -48,17 +48,17 @@ const Home = () => {
         </div>
 
         <div className={styles.tripSummary}>
-          <h3>Resumen del viaje</h3>
-          <ul>
-            <li>Distancia total: <strong>1,000 km</strong></li>
-            <li>Duración: <strong>3 días</strong></li>
+          <h3 className={styles.resumen}>Resumen del viaje</h3>
+          <ul className={styles.summaryList}>
+            <li>Distancia total: <strong>1,000 km 📏</strong></li><br></br>
+            <li>Duración: <strong>3 días📅</strong></li><br></br>
             <li>Eventos destacados: <strong>4</strong> ⭐</li>
           </ul>
         </div>
 
         <button 
           className={styles.exploreButton} 
-          onClick={() => navigate('/detalle')}
+          onClick={() => navigate('/daybyday')}
         >
           📅 Explorar itinerario día a día
         </button>
